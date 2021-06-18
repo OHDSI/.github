@@ -1,11 +1,5 @@
 {
     "name": "HADES R CMD check",
     "description": "Ohdsi R package template",
-    "iconName": "R_logo.svg",
-    "categories": [
-        "R"
-    ],
-    "filePatterns": [
-        "DESCRIPTION"
-    ]
+    "iconName": "R_logo"
 }
