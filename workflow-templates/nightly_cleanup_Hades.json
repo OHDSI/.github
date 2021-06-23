@@ -1,5 +1,5 @@
 {
-    "name": "Hades cleanup",
+    "name": "nightly artifacts cleanup",
     "description": "Hades cleanup template.",
     "iconName": "clean"
 }
