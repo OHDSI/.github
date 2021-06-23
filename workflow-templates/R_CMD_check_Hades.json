@@ -1,5 +1,5 @@
 {
-    "name": "HADES R CMD check",
+    "name": "R-CMD-check",
     "description": "Ohdsi R package template",
     "iconName": "R_logo"
 }
