@@ -1,0 +1,5 @@
+{
+    "name": "Reverse-deps-check",
+    "description": "Ohdsi R reverse dependency check template",
+    "iconName": "R_logo"
+}
