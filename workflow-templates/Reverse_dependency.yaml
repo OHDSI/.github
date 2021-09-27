@@ -85,7 +85,12 @@ jobs:
         run: |
           remotes::install_local(build_opts = c("--no-resave-data", "--no-manual", "--no-build-vignettes", "--no-multiarch"))
         shell: Rscript {0}
-        
+      
+      - name: Get reverse dependencies script
+        run: |
+          utils::download.file("https://raw.githubusercontent.com/OHDSI/.github/main/ReverseDependencyCheckFunctions.R", "ReverseDependencyCheckFunctions.R", method = "curl")
+        shell: Rscript {0}
+      
       - name: Install reverse dependencies
         run: |
           source("ReverseDependencyCheckFunctions.R")
