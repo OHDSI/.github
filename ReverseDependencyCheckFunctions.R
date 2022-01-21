@@ -3,7 +3,7 @@ prepareForReverseDependencyCheck <- function(pkgdir = ".") {
   description <- scan(file.path(pkgdir, "DESCRIPTION"), what = character(), sep = "|", quiet = TRUE) 
   rootPackage <- gsub("^Package:[ \t]*", "", description[grepl("^Package:", description)])
   
-  packageListUrl <- "https://raw.githubusercontent.com/OHDSI/Hades/master/extras/packages.csv"
+  packageListUrl <- "https://raw.githubusercontent.com/OHDSI/Hades/main/extras/packages.csv"
   gitHubOrganization <- "ohdsi"
   hadesPackageList <- read.table(packageListUrl, sep = ",", header = TRUE) 
   
@@ -83,7 +83,7 @@ checkPackage <- function(package, inCran) {
 }
 
 getPackageDependenciesFromGitHub <- function(package) {
-  descriptionUrlTemplate <- "https://raw.githubusercontent.com/OHDSI/%s/master/DESCRIPTION"
+  descriptionUrlTemplate <- "https://raw.githubusercontent.com/OHDSI/%s/main/DESCRIPTION"
   
   description <- scan(sprintf(descriptionUrlTemplate, package), what = character(), sep = "|", quiet = TRUE) 
   dependencies <- lapply(X = c("Depends", "Imports", "LinkingTo", "Suggests"), 
